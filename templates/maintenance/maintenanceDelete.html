@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row flex justify-content-between">
+        
+        <div class="itemdetail col-lg-5">
+            <h5>Are you sure, you want to delete: {{item.item.name}}</h5>
+           
+            <ul class="fs-5" style="font-family: Rajdhani;">
+                <li>Item Name: {{ item.item.name }}</li>
+                <li>Part repaired: {{ item.part_repaired }}</li>
+                <li>Supervised By: {{ item.supervised_by.username }}</li>
+                <li>Location: {{ item.location }}</li>
+                <li>Mechanic Name: {{ item.mechanic_Name }}</li>
+                <li>Mechanic number: {{ item.mechanic_Number }}</li>
+                <li>Amount Spent: {{ item.amount_spent }}</li>
+                <li>Description: {{ item.description }}</li>
+                {% if item.is_completed %}<li>Completed</li> {% else %} <li>Uncompleted</li> {% endif %}
+                <li>Date: {{ item.date_posted }}</li>
+                
+            </ul>
+            <small>NOTE: A mail will be sent to the company admin about this activities</small>
+            <form method="post" action="{% url 'delete-maintenance' item.id %}" class="d-inline">
+               {% csrf_token %} 
+                <input type="submit" class=" btn btn-danger shadow px-5 py-2"  value="Delete">
+                <a href="" class="btn btn-warning shadow px-5 py-2 ms-4">Cancel</a>
+
+            </form>
+           
+            <br><br><br>
+        </div>
+    </div>
+</div>

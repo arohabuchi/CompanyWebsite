@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row flex justify-content-between">
+        
+        <div class="itemdetail col-lg-5">
+           
+            <ul class="fs-5" style="font-family: Rajdhani;">
+                <li>{{ item.set_by }}</li>
+                <li>{{ item.title }}</li>
+                <li>{{ item.description }}</li>
+                <li>{{ item.is_mail }}</li>
+                <li>{{ item.date_of_action }}</li>
+                <li>{{ item.mail }}</li>
+                <li>{{ item.date_set }}</li>
+                
+            </ul>
+            <form action="" class="d-inline">
+                <input type="hidden" name="prod_id" value="{{item.id}}">
+                <button class=" btn btn-primary shadow px-5 py-2">Update</button>
+            </form>
+            <a href="" class="btn btn-warning shadow px-5 py-2 ms-4">Delete</a>
+           
+            <br><br><br>
+        </div>
+    </div>
+</div>

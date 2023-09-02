@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row flex justify-content-between">
+        <div class="img2 col-lg-5 mt-5">
+            <img height="90px" src="{{item.inventory_img.url}}" alt="" class="image col-xs-6 col-sm-12 mt3 text-sm-center w-100 h-75">
+        </div>
+        <div class="itemdetail col-lg-5">
+            <h5>Name: {{item.name}}</h5>
+           
+            <ul class="fs-5" style="font-family: Rajdhani;">
+                <li>Status: {{item.status}}</li>
+                <li>Is Available : {{item.is_available}}</li>
+                <li>Quantity: {{item.quantity}}</li>
+                <li>Date Uploaded: {{item.date_uploaded}}</li>
+                
+            </ul>
+            <form action="" class="d-inline">
+                <input type="hidden" name="prod_id" value="{{item.id}}">
+                <button class=" btn btn-primary shadow px-5 py-2">Update</button>
+            </form>
+            <a href="" class="btn btn-warning shadow px-5 py-2 ms-4">Delete</a>
+           
+            <br><br><br>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row flex justify-content-between">
+        
+        <div class="itemdetail col-lg-5">
+            <h5>Are you sure, you want to delete perform at: {{item.client_name}}</h5>
+           
+            <ul class="fs-5" style="font-family: Rajdhani;">
+
+
+                
+            </ul>
+            <small>NOTE: A mail will be sent to the company admin about this activities</small>
+            <form method="post" action="{% url 'delete-contactForm' item.id %}" class="d-inline">
+               {% csrf_token %} 
+                <input type="submit" class=" btn btn-danger shadow px-5 py-2"  value="Delete">
+                <a href="" class="btn btn-warning shadow px-5 py-2 ms-4">Cancel</a>
+
+            </form>
+           
+            <br><br><br>
+        </div>
+    </div>
+</div>
